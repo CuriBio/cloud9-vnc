@@ -30,7 +30,7 @@ Run the install script with privileges
     
 Clean up installation directory
     
-    rm -rf ./
+    cd .. && rm -rf ./cloud9-vnc/
 
 Uninstallation
 --------------
