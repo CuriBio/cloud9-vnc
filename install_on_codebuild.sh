@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -ex # exit if command fails and display commands https://www.peterbe.com/plog/set-ex
 # Removes sudo and sets default password for being installed during a AWS CodeBuild run for CI
 
 #Request sudo permissions
