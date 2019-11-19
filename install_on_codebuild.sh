@@ -20,9 +20,7 @@ apt-get install -y supervisor xvfb fluxbox x11vnc websockify
 echo "Cloning noVNC..."
 echo
 
-{
-    git clone git://github.com/kanaka/noVNC /opt/noVNC/
-}&> /dev/null
+git clone git://github.com/kanaka/noVNC /opt/noVNC/
 
 #Copy supervisord configuration to proper configuration directory
 echo "Configuring supervisord..."
@@ -42,9 +40,8 @@ mkdir -p /opt/c9vnc
 
 
 #Symlink script
-{
-    ln -s /opt/c9vnc/c9vnc.sh /usr/local/bin/c9vnc
-}&> /dev/null
+ln -s /opt/c9vnc/c9vnc.sh /usr/local/bin/c9vnc
+
 
 #Export X11 Settings
 echo "Configuring X11"
