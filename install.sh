@@ -35,9 +35,8 @@ done
 echo "Cloning noVNC..."
 echo
 
-{
-    git clone git://github.com/kanaka/noVNC /opt/noVNC/
-}&> /dev/null
+
+git clone git://github.com/novnc/noVNC /opt/noVNC/
 
 #Copy supervisord configuration to proper configuration directory
 echo "Configuring supervisord..."
@@ -93,3 +92,7 @@ while true; do
         * ) echo "Please answer yes or no.";;
     esac
 done
+
+
+# make sure the novnc repo is at a SHA we know works (Eli: as of 11/23/19 we know this SHA works, and that the master pulled on this day does not)
+cd /opt/noVNC && git checkout 32e0819 && git reset --hard
