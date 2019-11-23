@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -ex # exit if command fails and display commands https://www.peterbe.com/plog/set-ex
 # Install prerequisites (supervisor xvfb fluxbox x11vnc websockify)
 # Redirect stdout to null
 install_prerequisites() {
@@ -95,4 +95,6 @@ source ~/.bashrc
 
 
 # make sure the novnc repo is at a SHA we know works (Eli: as of 11/23/19 we know this SHA works, and that the master pulled on this day does not)
-cd /opt/noVNC && git checkout 32e0819 && git reset --hard
+cd /opt/noVNC 
+sudo git checkout 32e0819 
+sudo git reset --hard
